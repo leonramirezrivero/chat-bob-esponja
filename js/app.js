@@ -1,7 +1,18 @@
+var url = window.location.href;
+var SWLocation = '/chat-bob-esponja/sw.js';
+
 if(navigator.serviceWorker){
-    navigator.serviceWorker.register('/sw.js');
+   
+    //Local host
+    if(url.includes('localhost')){
+        SWLocation = '/sw.js';
+    }
+    //Git
+    else{
+        navigator.serviceWorker.register(SWLocation);
+    }
+
 }
-// Referencias de jQuery
 
 // Referencias de jQuery
 
