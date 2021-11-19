@@ -6,9 +6,7 @@ if(navigator.serviceWorker){
     //Local host
     if(url.includes('localhost')){
         SWLocation = '/sw.js';
-    }
-    //Git
-    else{
+    }else{
         navigator.serviceWorker.register(SWLocation);
     }
 
