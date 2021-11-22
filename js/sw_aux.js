@@ -5,6 +5,8 @@ function actualizarCacheDinamico(dynamicCache, req, res){
         return caches.open(dynamicCache).then(cache=>{
             cache.put(req, res.clone());
             return res.clone();
+        }).catch( err =>{
+            
         });
     }
     else{
