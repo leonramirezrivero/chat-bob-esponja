@@ -71,6 +71,8 @@ self.addEventListener('fetch', event =>{
                 //Llamamos funcion del archivo sw-aux.js de Guardar en cache Dinamico
                 return actualizarCacheDinamico(DYNAMIC_CACHE,event.request,newRes);
                 
+            }).catch(error => {
+                
             });
         }
 
